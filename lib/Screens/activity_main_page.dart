@@ -84,8 +84,8 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                   ),
                   Container(
+                    width: double.infinity,
                     margin: EdgeInsets.all(15),
-                    width: 350,
                     child: OutlinedButton(
                       child: Text(
                         " जनता के दरबार में मुख्यमंत्री” कार्यक्रम के लिए आवेदन करें | ",
@@ -102,8 +102,8 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(4),
-                    width: 350,
+                    width: double.infinity,
+                    margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
                     child: OutlinedButton(
                       child: Text(
                         " आवेदन की स्थिति ",
@@ -126,21 +126,24 @@ class _MainScreenState extends State<MainScreen> {
                     alignment: Alignment.center,
                     //child: Text(" जनता के दरबार में मुख्यमंत्री” कार्यक्रम " ),
 
-                    child: RichText(
-                      text: TextSpan(
-                          text: '"   जनता के दरबार में मुख्यमंत्री ” कार्यक्रम  ' +
-                              "\n",
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                              text: '"जनता के दरबार में मुख्यमंत्री ” कार्यक्रम' +
+                                  "\n",
+                              style: TextStyle(
+                                fontSize: 22,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
 
+                              children: <TextSpan>[]),
+                        ),
 
-                          style: TextStyle(
-                              fontSize: 22,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-
-
-                          ),
-                          children: <TextSpan>[
-                            TextSpan(
+                        RichText(
+                          text: TextSpan(
                               text: "\n" +
                                   "राज्य की जनता से सीधा संवाद स्थापित करने, उनकी समस्यायों एवं शिकायतों से अवगत होने तथा उनके त्वरित निवारण हेतु प्रभावी व्यवस्था स्थापित करने के लिए माननीय मुख्यमंत्री, बिहार द्वारा “जनता के दरबार में मुख्यमंत्री” कार्यक्रम को प्रारंभ किया जा रहा है | \n" +
                                   "\n" +
@@ -150,12 +153,14 @@ class _MainScreenState extends State<MainScreen> {
                                   "\n" +
                                   "कार्यक्रम का आयोजन “जनता दरबार भवन”, मुख्यमंत्री सचिवालय, 4 देशरत्न मार्ग पटना में किया जाता है|\n",
                               style: TextStyle(
-                                fontSize: 12,
+                                fontSize: 14,
+                                color: Colors.black,
                                 //fontStyle: FontStyle.italic,
                                 //fontWeight: FontWeight.bold,
                               ),
-                            ),
-                          ]),
+                              children: <TextSpan>[]),
+                        ),
+                      ],
                     ),
                   ),
 
