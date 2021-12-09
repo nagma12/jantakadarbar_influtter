@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 //import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_login.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
   /*void initState() {
     super.initState();
     getLocationData();
@@ -53,7 +55,11 @@ class _MainScreenState extends State<MainScreen> {
                     alignment: Alignment.centerRight,
                     child: GestureDetector(
                       onTap: () {
-                        print('Text Clicked');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()),
+                        );
                       },
                       child: Text('Official Login',style: TextStyle(color: Colors.white)),
                     ),
@@ -79,6 +85,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.all(15),
+                    width: 350,
                     child: OutlinedButton(
                       child: Text(
                         " जनता के दरबार में मुख्यमंत्री” कार्यक्रम के लिए आवेदन करें | ",
@@ -96,6 +103,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.all(4),
+                    width: 350,
                     child: OutlinedButton(
                       child: Text(
                         " आवेदन की स्थिति ",
@@ -120,12 +128,17 @@ class _MainScreenState extends State<MainScreen> {
 
                     child: RichText(
                       text: TextSpan(
-                          text: '" जनता के दरबार में मुख्यमंत्री” कार्यक्रम "' +
+                          text: '"   जनता के दरबार में मुख्यमंत्री ” कार्यक्रम  ' +
                               "\n",
+
+
                           style: TextStyle(
                               fontSize: 22,
                               color: Colors.black,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,
+
+
+                          ),
                           children: <TextSpan>[
                             TextSpan(
                               text: "\n" +
@@ -137,7 +150,7 @@ class _MainScreenState extends State<MainScreen> {
                                   "\n" +
                                   "कार्यक्रम का आयोजन “जनता दरबार भवन”, मुख्यमंत्री सचिवालय, 4 देशरत्न मार्ग पटना में किया जाता है|\n",
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 12,
                                 //fontStyle: FontStyle.italic,
                                 //fontWeight: FontWeight.bold,
                               ),

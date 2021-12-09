@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jantakadarbar_influtter/Screens/splash_screen.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_main_page.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_login.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
       home: SplashScreen(),
-      //home: MainScreen(),
+      //home: LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
