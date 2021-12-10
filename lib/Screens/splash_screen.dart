@@ -51,37 +51,32 @@ class _SplashScreenState extends State<SplashScreen> {
         alignment: Alignment.center,
         child: Image.asset('Images/topnew.jpg'),
       ),
-              Expanded(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        color: Colors.white,
-                        height: 600.0,
-                        alignment: Alignment.center,
-                        child: Image.asset('Images/newlogo.jpg'),
-                      ),
-
-                      //TextField nearly at bottom
-
-                    ],
+          Expanded(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    color: Colors.white,
+                    height: 600.0,
+                    alignment: Alignment.center,
+                    child: Image.asset('Images/newlogo.jpg'),
                   ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                color: Color(0xff0c4150),
-                alignment: Alignment.center,
-                child: Text(" Services provided by: NIC Bihar ", style: TextStyle(color: Colors.white)),
-              ),
-      ],
-      ),
-      )
 
-    );
+                  //TextField nearly at bottom
+                ],
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            color: Color(0xff0c4150),
+            alignment: Alignment.center,
+            child: Text(" Services provided by: NIC Bihar ",
+                style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      ),
+    ));
   }
 }
-
-
-

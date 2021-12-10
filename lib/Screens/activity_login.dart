@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.all(50),
-                    width: 250,
+                    width: double.infinity,
                     child: OutlinedButton(
                       child: Text(
                         " LOGIN ",

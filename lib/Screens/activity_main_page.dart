@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 //import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_login.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_check_application_status.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_register_complaint.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -97,7 +99,11 @@ class _MainScreenState extends State<MainScreen> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15))),
                       onPressed: () {
-                        print('Pressed');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterComplaintScreen()),
+                        );
                       },
                     ),
                   ),
@@ -115,7 +121,11 @@ class _MainScreenState extends State<MainScreen> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15))),
                       onPressed: () {
-                        print('Pressed');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ApplicationStatusScreen()),
+                        );
                       },
                     ),
                   ),
@@ -170,7 +180,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             color: Color(0xff0c4150),
             alignment: Alignment.center,
             child: Text(" Services provided by: NIC Bihar ",

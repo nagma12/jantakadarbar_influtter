@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jantakadarbar_influtter/Screens/splash_screen.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_main_page.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_login.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_check_application_status.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_register_complaint.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,8 +28,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: SplashScreen(),
-      //home: LoginScreen(),
+      //home: SplashScreen(),
+      home : RegisterComplaintScreen(),
+
       debugShowCheckedModeBanner: false,
     );
   }
