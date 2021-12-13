@@ -4,6 +4,8 @@ import 'package:jantakadarbar_influtter/Screens/activity_main_page.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_login.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_check_application_status.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_register_complaint.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_mark_attendance_dashboard_home.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_qr_code_scanner.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
       ),
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
       //home: SplashScreen(),
-      home : RegisterComplaintScreen(),
+      home : QRCodeScanner(),
 
       debugShowCheckedModeBanner: false,
     );
