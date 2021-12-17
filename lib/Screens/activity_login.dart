@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:jantakadarbar_influtter/Screens/activity_main_page.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_mark_attendance_dashboard_home.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -84,7 +85,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15))),
                       onPressed: () {
-                        print('Pressed');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MarkAttenadanceDashboard()),
+                        );
                       },
                     ),
                   ),

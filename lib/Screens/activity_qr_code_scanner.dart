@@ -5,6 +5,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_login.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_check_application_status.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_register_complaint.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_applicationStatus.dart';
 
 
 class QRCodeScanner extends StatefulWidget {
@@ -139,7 +140,7 @@ class _QRCodeScannerState extends State<QRCodeScanner> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginScreen()),
+                              builder: (context) => ApplicationStatus()),
                         );
                       },
                       child: Text(

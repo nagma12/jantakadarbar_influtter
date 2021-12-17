@@ -6,6 +6,8 @@ import 'package:jantakadarbar_influtter/Screens/activity_check_application_statu
 import 'package:jantakadarbar_influtter/Screens/activity_register_complaint.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_mark_attendance_dashboard_home.dart';
 import 'package:jantakadarbar_influtter/Screens/activity_qr_code_scanner.dart';
+import 'package:jantakadarbar_influtter/services/Networking.dart';
+import 'package:jantakadarbar_influtter/Screens/activity_District.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,9 +33,12 @@ class MyApp extends StatelessWidget {
       ),
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
       //home: SplashScreen(),
-      home : QRCodeScanner(),
+      home: DistrictScreen(),
+      //home: functionCall(),
+      //home : QRCodeScanner(),
 
       debugShowCheckedModeBanner: false,
+
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:jantakadarbar_influtter/Screens/activity_main_page.dart';
+import 'package:jantakadarbar_influtter/services/Networking.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -21,6 +22,10 @@ class _SplashScreenState extends State<SplashScreen> {
             )
         )
     );
+   var data =  NetworkHelper().getDistrictsFromXML(context);
+   print("data");
+   print(data);
+   print(data.runtimeType);
   }
   /*void initState() {
     super.initState();

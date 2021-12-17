@@ -20,6 +20,7 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
   late String currentyearofBirth = yearofBirth[0];
   final disablelist = ['-चयन करें-', 'हाँ', 'नहीं'];
   late String currentdisability = disablelist[0];
+  bool _isReadonly = false;
 
   adddateinList<T>(List<T> list) {
     var date = new DateTime.now().toString();
@@ -103,6 +104,9 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
                       Container(
                         padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
                         child: TextFormField(
+                           readOnly: _isReadonly,
+                          //enableInteractiveSelection: false,
+                            //focusNode: FocusNode(),
                             decoration: InputDecoration(
                               fillColor: Color.fromARGB(255, 238, 241, 241),
                               filled: true,
@@ -142,6 +146,9 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
                       Container(
                         padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
                         child: TextFormField(
+                          readOnly: _isReadonly,
+                            //enableInteractiveSelection: false,
+                            //focusNode: FocusNode(),
                             decoration: InputDecoration(
                               fillColor: Color.fromARGB(255, 238, 241, 241),
                               filled: true,
@@ -181,6 +188,9 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
                       Container(
                         padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
                         child: TextFormField(
+                          readOnly: _isReadonly,
+                            //enableInteractiveSelection: false,
+                            //focusNode: FocusNode(),
                             decoration: InputDecoration(
                               fillColor: Color.fromARGB(255, 238, 241, 241),
                               filled: true,
@@ -209,7 +219,6 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
                       Expanded(
                         // optional flex property if flex is 1 because the default flex is 1
                         flex: 1,
-
                         child: Column(children: <Widget>[
                           Container(
                             alignment: Alignment.topLeft,
@@ -234,7 +243,9 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
                                 borderRadius: BorderRadius.circular(1),
                               ),
                               child: DropdownButtonHideUnderline(
+
                                 child: DropdownButtonFormField<String>(
+
                                   value: currentgenders,
                                   items: genders.map((gender) {
                                     return DropdownMenuItem(
@@ -415,6 +426,9 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
                       Container(
                         padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
                         child: TextFormField(
+                            //enableInteractiveSelection: false,
+                            //focusNode: FocusNode(),
+                            readOnly: _isReadonly,
                             decoration: InputDecoration(
                               fillColor: Color.fromARGB(255, 238, 241, 241),
                               filled: true,
@@ -424,7 +438,7 @@ class _RegisterComplaintScreenState extends State<RegisterComplaintScreen> {
                                       color: Colors.blueGrey, width: 1.5),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(3.5))),
-                              hintText: 'नईमेल आईडी  ',
+                              hintText: 'ईमेल आईडी  ',
                               hintStyle: TextStyle(fontSize: 12),
                               isDense: true,
                             ),
