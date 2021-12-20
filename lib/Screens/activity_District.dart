@@ -15,10 +15,11 @@ class _DistrictScreenState extends State<DistrictScreen> {
   @override
   void initState() {
     super.initState();
-    var data =  NetworkHelper().getDistrictsFromXML();
-    print("data");
-    print(data);
-    print(data.runtimeType);
+    // var data =  NetworkHelper().getDistrictsFromXML();
+    // print("data");
+    // print(data);
+    
+    var blocks = NetworkHelper().getBlockList("209");
   }
   /*void initState() {
     super.initState();
