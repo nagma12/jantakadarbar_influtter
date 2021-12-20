@@ -22,9 +22,9 @@ class _SplashScreenState extends State<SplashScreen> {
             )
         )
     );
-   var data =  NetworkHelper().getDistrictsFromXML(context);
-   print("data");
-   print(data);
+   var data =  NetworkHelper().getDistrictsFromXML();
+   //print("data");
+   //print(data);
    print(data.runtimeType);
   }
   /*void initState() {

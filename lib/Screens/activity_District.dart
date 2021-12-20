@@ -15,7 +15,7 @@ class _DistrictScreenState extends State<DistrictScreen> {
   @override
   void initState() {
     super.initState();
-    var data =  NetworkHelper().getDistrictsFromXML(context);
+    var data =  NetworkHelper().getDistrictsFromXML();
     print("data");
     print(data);
     print(data.runtimeType);
@@ -56,7 +56,7 @@ class _DistrictScreenState extends State<DistrictScreen> {
                     children: <Widget>[
                       Container(
                           child: FutureBuilder(
-                            future: NetworkHelper().getDistrictsFromXML(context),builder : (context, snapshot)
+                            future: NetworkHelper().getDistrictsFromXML(),builder : (context, snapshot)
                           {
                             if (snapshot.hasData){
                               //List<dist> _dist = snapshot.data ;

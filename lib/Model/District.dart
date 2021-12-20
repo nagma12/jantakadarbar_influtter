@@ -11,7 +11,6 @@ dist(
   this._DistCode,
   this._DistName,
   this._DistNameHN,
-
 );
 
 /*dist.fromMap(Map map)
@@ -29,7 +28,6 @@ dist(
 factory dist.fromMap(Map<String,dynamic> xml){
 
       return dist(xml["DistCode"],xml["DistName"],xml["DistNameHN"]);
-
 }
 
   get DistCode => this._DistCode;
